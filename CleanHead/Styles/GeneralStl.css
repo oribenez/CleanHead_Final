@@ -1,0 +1,484 @@
+﻿@import url(http://fonts.googleapis.com/earlyaccess/alefhebrew.css);
+
+*,
+*:after,
+*:before 
+{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+html, body{
+    margin: 0;
+    height: 100%;
+    font-family: "Alef Hebrew",
+               “Helvetica Neue”,
+               Helvetica,Tahoma,Arial;
+    letter-spacing: -0.8px !important;
+    /*color: #383838;*/
+    color: rgba(0,0,0,.65);
+    text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+a {
+    color: #646361;
+    text-decoration: none;
+    /*font-weight: normal;*/
+}
+
+a:hover {
+    color: #EF5350;
+}
+
+.float-right{
+    float:right;
+}
+
+.float-left{
+    float:left;
+}
+
+.cancel-user-select{
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+
+    /* No support for these yet, use at own risk */
+    -o-user-select: none;
+    user-select: none;  
+}
+
+.clear{
+    clear:both;
+}
+
+select[disabled="disabled"]{
+    background:#dedede;
+    cursor: default !important;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+  font-weight: 400;
+  letter-spacing: .02rem;
+  clear: both;
+}
+
+.h1, h1{
+    font-size: 3rem;
+    line-height: 3.3rem;
+    margin: 1.2rem 0;
+}
+
+.h2, h2 {
+  font-size: 2.5rem;
+  line-height: 2.75rem;
+  margin: 1rem 0;
+}
+
+.h3, h3 {
+  font-size: 2rem;
+  line-height: 2.2rem;
+  margin: .8rem 0;
+}
+
+.h4, h4 {
+  font-size: 1.5rem;
+  line-height: 1.65rem;
+  margin: .6rem 0;
+}
+
+.h5, h5 {
+  font-size: 1.166rem;
+  line-height: 1.2826rem;
+  margin: .4664rem 0;
+}
+
+.h6, h6 {
+  font-size: 1rem;
+  line-height: 1.1rem;
+  margin: .4rem 0;
+}
+
+.card-panel {
+    border-radius: 2px;
+    background-color: #fff;
+    padding: 1.3rem;
+    box-shadow: 0 1px 2px rgba(0,0,0,.26);
+    margin: 0 0 1.8rem 0;
+}
+
+.flow-text {
+  font-size: 1.38rem;
+  line-height: 2.18rem;
+}
+
+.float-label {
+    position: absolute;
+    right: 0;
+    top: 10px;
+    font-size: 16px;
+    color: #999;
+    font-weight: 300;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+    -o-transition: 0.2s ease all;
+    transition: 0.2s ease all;
+}
+
+.form-control:focus ~ .float-label,
+.form-control:valid ~ .float-label {
+  top: -15px;
+  font-size: 12px;
+}
+
+input[placeholder]{
+    font-family: "Alef Hebrew",
+               “Helvetica Neue”,
+               Helvetica,Tahoma,Arial;
+}
+
+button, input[type="submit"] {
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    z-index: 1;
+    will-change: opacity,transform;
+    text-decoration: none;
+    -moz-transition: .2s ease-out;
+    -o-transition: .2s ease-out;
+    -webkit-transition: .2s ease-out;
+    transition: .2s ease-out;
+    color: #FFF;
+    background-color: #EF5350;
+    text-align: center;
+    letter-spacing: .5px;
+    box-shadow: 0 1px 2px rgba(0,0,0,.26);
+    border: 0;
+    padding: 8px 20px;
+    font-size: 17px;
+    font-family: "Alef Hebrew", “Helvetica Neue”, Helvetica,Tahoma,Arial;
+    border-radius: 4px;
+    width: initial;
+    padding: 5px 15px;
+}
+
+
+button:hover ,input[type="submit"]:hover {
+  background-color: #ef5350;
+  box-shadow: 0 2px 5px rgba(0,0,0,.4);
+}
+
+select {
+    font-family: "Alef Hebrew",
+    “Helvetica Neue”,
+    Helvetica,Tahoma,Arial;
+    position: relative;
+    cursor: pointer;
+    color: #444;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #9e9e9e;
+    outline: 0;
+    height: 3rem;
+    line-height: 3rem;
+    width: 100%;
+    font-size:18px;
+    padding: 0;
+    display: block;
+}
+
+
+select option {
+    color: #ef5350;
+    background:#fff;
+}
+
+select:active {
+    border-radius: 5px;
+    
+}
+button, select {
+  text-transform: none;
+}
+
+input[type=checkbox] {
+  display: none;
+  visibility: hidden;
+}
+
+input[type="checkbox"] + label {
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 500;
+    -moz-transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    -o-transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    -webkit-transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+input[type="checkbox"] + label:before {
+  display: inline-block;
+  content: "";
+  margin: 0 15px 3px 0;
+  width: 18px;
+  height: 18px;
+  background-color: #fff;
+  border: 2px solid #5a5a5a;
+  border-radius: 2px;
+  vertical-align: middle;
+}
+
+input[type=checkbox]:checked + label:before {
+  background-image: url('data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjIwcHgiIGhlaWdodD0iMTVweCIgdmlld0JveD0iMCAwIDIwIDE1Ij4NCjxwb2x5Z29uIGZpbGw9IiNGRkZGRkYiIHBvaW50cz0iNy4xNDMsMTQuOTM4IDAsNy43OTYgMi4wMjEsNS43NzYgNy4xNDMsMTAuODk4IDE3Ljk3OSwwLjA2MiAyMCwyLjA4MiAiLz4NCjwvc3ZnPg0K');
+  background-color: rgb(3, 169, 245);
+  border-color: rgb(3, 169, 245);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  -webkit-background-size: 11px auto;
+  -moz-background-size: 11px auto;
+  -o-background-size: 11px auto;
+  background-size: 11px auto;
+}
+
+
+
+.form-group { 
+    position:relative; 
+    margin-top: 35px;
+    margin-bottom: 20px;
+}
+input.material,textarea.material{
+    font-family: "Alef Hebrew",
+    “Helvetica Neue”,
+    Helvetica,Tahoma,Arial;
+    font-size:18px;
+    padding:10px 10px 10px 5px;
+    display:block;
+    width: 100%;
+    border:none;
+    border-bottom: 1px solid #9e9e9e;
+    height: 45px;
+}
+input.material:focus, textarea.material:focus { 
+    outline:none;
+    border-bottom: 0;
+    -moz-transition: 0.2s ease all;
+    -o-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+    transition: 0.2s ease all;
+}
+
+/* LABEL ======================================= */
+.form-label {
+    color: #999;
+    font-size: 18px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    right: 5px;
+    top: 10px;
+    -moz-transition: 0.2s ease all;
+    -o-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+    transition: 0.2s ease all;
+}
+
+/* active state */
+input.material:focus ~ .form-label, input.material:valid ~ .form-label, textarea.material:focus ~ .form-label, textarea.material:valid ~ .form-label {
+    top:-20px;
+    font-size:14px;
+    /*color:#ef5350;*/
+}
+
+
+/* BOTTOM BARS ================================= */
+.form-bar  { position:relative; display:block; }
+    .form-bar:before, .form-bar:after {
+        content: '';
+        height: 2px;
+        width: 0;
+        bottom: 1px;
+        position: absolute;
+        background: #ef5350;
+        -moz-transition: 0.2s ease all;
+        -o-transition: 0.2s ease all;
+        -webkit-transition: 0.2s ease all;
+        transition: 0.2s ease all;
+    }
+.form-bar:before {
+    left:50%;
+}
+.form-bar:after {
+    right:50%; 
+}
+
+/* active state */
+input:focus ~ .form-bar:before, input:focus ~ .form-bar:after, textarea:focus ~ .form-bar:before, textarea:focus ~ .form-bar:after {
+    width:50%;
+}
+
+/* HIGHLIGHTER ================================== */
+.form-highlight {
+    position:absolute;
+    height:60%; 
+    width:100px; 
+    /*top:25%;*/
+    top:2%; 
+    right:0;
+    pointer-events:none;
+    opacity:0.5;
+}
+
+/* active state */
+input.material:focus ~ .form-highlight {
+    -moz-animation: inputHighlighter 0.3s ease;
+    -o-animation: inputHighlighter 0.3s ease;
+    -webkit-animation: inputHighlighter 0.3s ease;
+    animation: inputHighlighter 0.3s ease;
+}
+
+/* ANIMATIONS ================ */
+@keyframes inputHighlighter {
+    from  { background:#ef5350; }
+    to    { width:0; background:transparent; }
+}
+
+
+.form-group i.err {
+	position: absolute;
+	left: 0;
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	float: left;
+    margin: 3px 0 0 0;
+}
+
+.form-group i.err svg {
+	fill:#d34336;
+}
+
+.form-group span.err {
+    color: #d34336;
+    font-size: 13px;
+}
+
+/*---table-striped---*/
+.table-striped{
+    width:100% !important;
+}
+.table-striped, .table-striped td, .table-striped th {
+    border: 1px solid #ddd;
+}
+.table-striped tr:nth-child(1){
+    border-bottom: 2px solid #ddd;
+    text-align: right;
+}
+.table-striped tr:not(:first-child):hover{
+    background:#f5f5f5;
+}
+
+.table-striped tr:nth-child(2n) {
+    background-color: #f9f9f9;
+}
+.table-striped>tbody>tr>td, .table-striped>tbody>tr>th, .table-striped>tbody>tr>td:nth-child(1), .table-striped>tbody>tr:nth-child(1) {
+    padding: 8px;
+    line-height: 1.42857143;
+    vertical-align: middle;
+    border-top: 1px solid #ddd;
+}
+.table-striped table tr td span, .table-striped table tr td a, .pager {
+    padding: 2px 11px;
+    background: #2196F3;
+    color: #BBDEFB;
+    border-radius: 20%;
+    margin: 0 2px;
+    font-size: 18px;
+}
+.pager:hover{
+    color: #fff;
+}
+.table-striped table tr td {
+    border: 0;
+}
+/*-[END]--table-striped--[END]-*/
+
+/*---table-striped-accordion---*/
+.table-striped-accordion{
+    width:100% !important;
+}
+.table-striped-accordion, .table-striped-accordion td, .table-striped-accordion th {
+    border: 1px solid #ddd;
+}
+.table-striped-accordion tr:nth-child(1){
+    border-bottom: 2px solid #ddd;
+    text-align: right;
+}
+.table-striped-accordion tr:nth-child(2n){
+    cursor:pointer;
+}
+.table-striped-accordion tr:nth-child(2n):hover{
+    background:#f5f5f5;
+}
+
+.table-striped-accordion tr:nth-child(4n+2) {
+    background-color: #f9f9f9;
+}
+.table-striped-accordion>tbody>tr>td, .table-striped-accordion>tbody>tr>th, .table-striped-accordion>tbody>tr>td:nth-child(1), .table-striped-accordion>tbody>tr:nth-child(1) {
+    padding: 8px;
+    line-height: 1.42857143;
+    vertical-align: middle;
+    border-top: 1px solid #ddd;
+}
+.table-striped-accordion table tr td span, .table-striped-accordion table tr td a {
+    padding: 2px 11px;
+    background: #2196F3;
+    color: #BBDEFB;
+    border-radius: 20%;
+    margin: 0 2px;
+    font-size: 18px;
+}
+.table-striped-accordion table tr td {
+    border: 0;
+}
+/*-[END]--table-striped-accordion--[END]-*/
+
+/*---btn-plus---*/
+.btn-plus-header{
+    font-size: 32px !important;
+    padding: 3px 16px 2px 16px !important;
+    border-radius: 50% !important;
+    outline: none !important;
+    width: 50px !important;
+    height: 50px !important;
+    font-family: sans !important;
+    font-weight: bold;
+    margin: -5px 0 0 0 !important;
+    position: absolute !important;
+}
+.btn-plus{
+    font-size: 32px !important;
+    padding: 3px 16px 2px 16px !important;
+    border-radius: 50% !important;
+    outline: none !important;
+    width: 50px !important;
+    height: 50px !important;
+    font-family: sans !important;
+    font-weight: bold;
+}
+/*-[END]--btn-plus--[END]-*/

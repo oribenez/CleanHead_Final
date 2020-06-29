@@ -1,0 +1,158 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Dashboard.master.cs" Inherits="Dashboard" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" dir="rtl">
+<head runat="server">
+    <link href="Styles/GeneralStl.css" rel="stylesheet" />
+    <link href="Styles/DashboardStl.css" rel="stylesheet" />
+    <title>ראש נקי</title>
+    <link rel="icon" type="image/png" href="Images/favicon.png" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <asp:ContentPlaceHolder ID="PopUps" runat="server"></asp:ContentPlaceHolder>
+        <div id="header">
+            <div class="header-logo-wrap">
+                <div id="header_logo"></div>
+                <div id="header_logo_txt">ראש נקי</div>
+                <div class="clear"></div>
+            </div>
+            <div class="header-more-wrap">
+                <div id="header_more">
+                    <a href="Messages.aspx" id="wrap_msg">
+                        <svg xmlns="http://www.w3.org/2000/svg" id="msg" width="29" height="29" viewBox="0 0 24 24">
+                            <path d="M20 2h-16c-1.1 0-1.99.9-1.99 2l-.01 18 4-4h14c1.1 0 2-.9 2-2v-12c0-1.1-.9-2-2-2zm-14 7h12v2h-12v-2zm8 5h-8v-2h8v2zm4-6h-12v-2h12v2z"/>
+                            <path d="M0 0h24v24h-24z" fill="none"/>
+                        </svg>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+        <div id="side_bar">
+            <a href="UsrProfile.aspx" id="profile-link">
+                <div class="usr-back">
+                    <div class="usr-photo"></div>
+                    <div class="usr-back-photo">
+                        <asp:Label ID="user_text" runat="server" Text=""></asp:Label>
+                    </div>             
+                </div>
+            </a>
+            <div class="side_barSubject">תפריט</div>
+            <a href="Default.aspx" class="wrap_side_bar_link default">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="sidebar-icon" width="21" height="21" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24h-24z" fill="none"/>
+                        <path d="M3 13h8v-10h-8v10zm0 8h8v-6h-8v6zm10 0h8v-10h-8v10zm0-18v6h8v-6h-8z"/>
+                    </svg>
+
+<%--                    <div id="default"></div>--%>
+                    ראשי
+                </div>
+            </a>
+            <a href="Behaviors.aspx" class="wrap_side_bar_link behavior">
+                <div >
+                    <svg xmlns="http://www.w3.org/2000/svg" class="sidebar-icon" width="21" height="21" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24h-24z" fill="none"/>
+                        <path d="M11.99 2c-5.52 0-9.99 4.48-9.99 10s4.47 10 9.99 10c5.53 0 10.01-4.48 10.01-10s-4.48-10-10.01-10zm.01 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5s-.67-1.5-1.5-1.5-1.5.67-1.5 1.5.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5s-.67-1.5-1.5-1.5-1.5.67-1.5 1.5.67 1.5 1.5 1.5zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5h-10.22c.8 2.04 2.78 3.5 5.11 3.5z"/>
+                    </svg>
+
+                    התנהגות
+                </div>
+            </a>
+
+            <%
+        if (Convert.ToInt32(Session["lvl_id"]) != 2) { // if crew
+         %>
+
+            <a href="Grades.aspx" class="wrap_side_bar_link grades">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="sidebar-icon" width="21" height="21" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24h-24z" fill="none"/>
+                        <path d="M12.45 16h2.09l-5.11-13h-1.86l-5.11 13h2.09l1.12-3h5.64l1.14 3zm-6.02-5l2.07-5.52 2.07 5.52h-4.14zm15.16.59l-8.09 8.09-3.67-3.68-1.41 1.41 5.09 5.09 9.49-9.5-1.41-1.41z"/>
+                    </svg>
+
+                    ציונים
+                </div>
+            </a>
+            <%} %>
+
+            <a href="Homework.aspx" class="wrap_side_bar_link homework">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="sidebar-icon" height="21" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24h-24z" fill="none"/>
+                        <path d="M18 2h-12c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2v-16c0-1.1-.9-2-2-2zm-12 2h5v8l-2.5-1.5-2.5 1.5v-8z"/>
+                    </svg>
+
+                    שיעורי בית
+                </div>
+            </a>
+            <a href="Schedule.aspx" class="wrap_side_bar_link schedule">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="sidebar-icon" width="21" height="21" viewBox="0 0 24 24">
+                        <path d="M17 12h-5v5h5v-5zm-1-11v2h-8v-2h-2v2h-1c-1.11 0-1.99.9-1.99 2l-.01 14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-14c0-1.1-.9-2-2-2h-1v-2h-2zm3 18h-14v-11h14v11z"/>
+                        <path d="M0 0h24v24h-24z" fill="none"/>
+                    </svg>
+
+                    לוח שנה
+                </div>
+            </a>
+            <%if(Session["lvl_id"] != null)
+            {
+                if (Convert.ToInt32(Session["lvl_id"]) > 0)
+                {
+                  %>
+                    <a href="ControlPanel.aspx" class="wrap_side_bar_link control_panel">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="sidebar-icon" width="21" height="21" viewBox="0 0 24 24">
+                                <path d="M0 0h24v24h-24z" fill="none"/>
+                                <path d="M19.43 12.98c.04-.32.07-.64.07-.98s-.03-.66-.07-.98l2.11-1.65c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.3-.61-.22l-2.49 1c-.52-.4-1.08-.73-1.69-.98l-.38-2.65c-.03-.24-.24-.42-.49-.42h-4c-.25 0-.46.18-.49.42l-.38 2.65c-.61.25-1.17.59-1.69.98l-2.49-1c-.23-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64l2.11 1.65c-.04.32-.07.65-.07.98s.03.66.07.98l-2.11 1.65c-.19.15-.24.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1c.52.4 1.08.73 1.69.98l.38 2.65c.03.24.24.42.49.42h4c.25 0 .46-.18.49-.42l.38-2.65c.61-.25 1.17-.59 1.69-.98l2.49 1c.23.09.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.65zm-7.43 2.52c-1.93 0-3.5-1.57-3.5-3.5s1.57-3.5 3.5-3.5 3.5 1.57 3.5 3.5-1.57 3.5-3.5 3.5z"/>
+                            </svg>
+
+                            פאנל ניהול
+                        </div>
+                    </a>
+            <%  }
+              } %>
+
+            <a href="About.aspx" id="about" class="wrap_side_bar_link">
+                <div>
+                    <svg fill="#FFFFFF" class="sidebar-icon" width="21" height="21" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M12 11.55C9.64 9.35 6.48 8 3 8v11c3.48 0 6.64 1.35 9 3.55 2.36-2.19 5.52-3.55 9-3.55V8c-3.48 0-6.64 1.35-9 3.55zM12 8c1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3 1.34 3 3 3z"/>
+                    </svg>
+                    אודות האתר
+                </div>
+            </a>
+
+            <a href="Logout.aspx" id="disconnect" class="wrap_side_bar_link">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="sidebar-icon" width="21" height="21" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24h-24z" fill="none"/>
+                        <path d="M7 24h2v-2h-2v2zm4 0h2v-2h-2v2zm2-22h-2v10h2v-10zm3.56 2.44l-1.45 1.45c1.73 1.05 2.89 2.94 2.89 5.11 0 3.31-2.69 6-6 6s-6-2.69-6-6c0-2.17 1.16-4.06 2.88-5.12l-1.44-1.44c-2.08 1.44-3.44 3.84-3.44 6.56 0 4.42 3.58 8 8 8s8-3.58 8-8c0-2.72-1.36-5.12-3.44-6.56zm-1.56 19.56h2v-2h-2v2z"/>
+                    </svg>
+
+
+                    התנתק
+                </div>
+            </a>
+        </div>
+        <div id="content">
+            <div class="page-title">
+                <h1><asp:ContentPlaceHolder id="PageTitle" runat="server"></asp:ContentPlaceHolder></h1>
+                <div><asp:ContentPlaceHolder id="PageLinks" runat="server"></asp:ContentPlaceHolder></div>
+            </div>
+            <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+            <div class="clear"></div>
+<%--            <div class="copyrights">
+                Built by ORIBENEZ © 2015
+            </div>--%>
+        </div>
+        
+    
+    </form>
+</body>
+</html>

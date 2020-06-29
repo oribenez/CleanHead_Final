@@ -1,0 +1,15 @@
+<?xml version="1.0" standalone="yes"?>
+<survey_root>
+  <survey_item>
+    <srv_id>1</srv_id>
+    <srv_question>מה דעתך על עיצוב האתר?</srv_question>
+    <srv_ans1>איום ונורא!</srv_ans1>
+    <srv_ans2>היה יכול להיות יותר טוב</srv_ans2>
+    <srv_ans3>יפה</srv_ans3>
+    <srv_ans4>אין לי מילים... פשוט מדהים!</srv_ans4>
+    <srv_ans1_score />
+    <srv_ans2_score />
+    <srv_ans3_score />
+    <srv_ans4_score />
+  </survey_item>
+</survey_root>

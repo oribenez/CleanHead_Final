@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetReligious">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetReligiousResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetReligiousResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetHolidaysVacations">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetHolidaysVacationsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetHolidaysVacationsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetHolidaysVacationsByRlgId">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="rlg_id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetHolidaysVacationsByRlgIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetHolidaysVacationsByRlgIdResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetHolidaysVacationsByDate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="dt" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetHolidaysVacationsByDateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetHolidaysVacationsByDateResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetHolidaysVacationsByDateByRlgId">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="dt" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="rlg_id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetHolidaysVacationsByDateByRlgIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetHolidaysVacationsByDateByRlgIdResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetReligiousSoapIn">
+    <wsdl:part name="parameters" element="tns:GetReligious" />
+  </wsdl:message>
+  <wsdl:message name="GetReligiousSoapOut">
+    <wsdl:part name="parameters" element="tns:GetReligiousResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetHolidaysVacationsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetHolidaysVacations" />
+  </wsdl:message>
+  <wsdl:message name="GetHolidaysVacationsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetHolidaysVacationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetHolidaysVacationsByRlgIdSoapIn">
+    <wsdl:part name="parameters" element="tns:GetHolidaysVacationsByRlgId" />
+  </wsdl:message>
+  <wsdl:message name="GetHolidaysVacationsByRlgIdSoapOut">
+    <wsdl:part name="parameters" element="tns:GetHolidaysVacationsByRlgIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetHolidaysVacationsByDateSoapIn">
+    <wsdl:part name="parameters" element="tns:GetHolidaysVacationsByDate" />
+  </wsdl:message>
+  <wsdl:message name="GetHolidaysVacationsByDateSoapOut">
+    <wsdl:part name="parameters" element="tns:GetHolidaysVacationsByDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetHolidaysVacationsByDateByRlgIdSoapIn">
+    <wsdl:part name="parameters" element="tns:GetHolidaysVacationsByDateByRlgId" />
+  </wsdl:message>
+  <wsdl:message name="GetHolidaysVacationsByDateByRlgIdSoapOut">
+    <wsdl:part name="parameters" element="tns:GetHolidaysVacationsByDateByRlgIdResponse" />
+  </wsdl:message>
+  <wsdl:portType name="HolidaysVacationsSoap">
+    <wsdl:operation name="GetReligious">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get DataSet of all religious</wsdl:documentation>
+      <wsdl:input message="tns:GetReligiousSoapIn" />
+      <wsdl:output message="tns:GetReligiousSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHolidaysVacations">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get DataSet of all holidays vacations</wsdl:documentation>
+      <wsdl:input message="tns:GetHolidaysVacationsSoapIn" />
+      <wsdl:output message="tns:GetHolidaysVacationsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHolidaysVacationsByRlgId">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get DataSet of holidays vacations by religious</wsdl:documentation>
+      <wsdl:input message="tns:GetHolidaysVacationsByRlgIdSoapIn" />
+      <wsdl:output message="tns:GetHolidaysVacationsByRlgIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHolidaysVacationsByDate">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get DataSet of holidays vacations of selected day</wsdl:documentation>
+      <wsdl:input message="tns:GetHolidaysVacationsByDateSoapIn" />
+      <wsdl:output message="tns:GetHolidaysVacationsByDateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHolidaysVacationsByDateByRlgId">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get DataSet of holidays vacations of selected day By Religion</wsdl:documentation>
+      <wsdl:input message="tns:GetHolidaysVacationsByDateByRlgIdSoapIn" />
+      <wsdl:output message="tns:GetHolidaysVacationsByDateByRlgIdSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="HolidaysVacationsSoap" type="tns:HolidaysVacationsSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetReligious">
+      <soap:operation soapAction="http://tempuri.org/GetReligious" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHolidaysVacations">
+      <soap:operation soapAction="http://tempuri.org/GetHolidaysVacations" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHolidaysVacationsByRlgId">
+      <soap:operation soapAction="http://tempuri.org/GetHolidaysVacationsByRlgId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHolidaysVacationsByDate">
+      <soap:operation soapAction="http://tempuri.org/GetHolidaysVacationsByDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHolidaysVacationsByDateByRlgId">
+      <soap:operation soapAction="http://tempuri.org/GetHolidaysVacationsByDateByRlgId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="HolidaysVacationsSoap12" type="tns:HolidaysVacationsSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetReligious">
+      <soap12:operation soapAction="http://tempuri.org/GetReligious" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHolidaysVacations">
+      <soap12:operation soapAction="http://tempuri.org/GetHolidaysVacations" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHolidaysVacationsByRlgId">
+      <soap12:operation soapAction="http://tempuri.org/GetHolidaysVacationsByRlgId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHolidaysVacationsByDate">
+      <soap12:operation soapAction="http://tempuri.org/GetHolidaysVacationsByDate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHolidaysVacationsByDateByRlgId">
+      <soap12:operation soapAction="http://tempuri.org/GetHolidaysVacationsByDateByRlgId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="HolidaysVacations">
+    <wsdl:port name="HolidaysVacationsSoap" binding="tns:HolidaysVacationsSoap">
+      <soap:address location="http://localhost:48595/HolidaysVacations.asmx" />
+    </wsdl:port>
+    <wsdl:port name="HolidaysVacationsSoap12" binding="tns:HolidaysVacationsSoap12">
+      <soap12:address location="http://localhost:48595/HolidaysVacations.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
